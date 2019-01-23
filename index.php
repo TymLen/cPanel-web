@@ -8,17 +8,11 @@
   <body>	
 	<header>
 		<a href="./index.php"><img class = "banner" src = "./img/bannertext.png" alt="Banner Text"></a>
-		<div class="navbar">
-			<div class="dropdown">
-				<button class="dropbtn">Index</button>
-				<div class="dropdown-content">
-					<a href="#">Projects</a>
-					<a href="#">Design</a>
-					<a href="#">Education</a>
-					<a href="#">About and Social</a>
-				</div>
+			<div class="navbar">
+				<a href="../html/projects.php">Projects</a>
+				<a href="../html/designs.php">Designs</a>
+				<a href="../html/edu.php">Education</a>
 			</div>
-		</div>		
 	</header>	
 	<article>
 		<p id="info">
