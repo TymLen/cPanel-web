@@ -9,9 +9,9 @@
 	<header>
 		<a href="./index.php"><img class = "banner" src = "./img/bannertext.png" alt="Banner Text"></a>
 			<div class="navbar">
-				<a href="../html/projects.php">Projects</a>
-				<a href="../html/designs.php">Designs</a>
-				<a href="../html/edu.php">Education</a>
+				<a href="./html/projects.php">Projects</a>
+				<a href="./html/designs.php">Designs</a>
+				<a href="./html/edu.php">Education</a>
 			</div>
 	</header>	
 	<article>
@@ -22,9 +22,9 @@
 		<div id ="deskShort">
 			<a href="https://protyme.herokuapp.com/" rel="noopener noreferrer" target="_blank"><img class = "deskIcon" src = "./img/nodeIcon.png" alt="nodejs Icon"><br>Node.js Portfolio</a><br><br>
 		</div>
-		<h2><a href="#" title="See all Projects">Recent Projects</a>:</h2> 
+		<h2><a href="./html/projects.php" title="See all Projects">Recent Projects</a>:</h2> 
 		<?php include './php/latestproject.php';?>
-		<h2><a href="#" title="See all Education">Recent Education</a>: </h2>
+		<h2><a href="./html/edu.php" title="See all Education">Recent Education</a>: </h2>
 		<?php include './php/latestcourse.php';?>
 	</article>
 	<footer><?php include './php/footer.php';?></footer>
