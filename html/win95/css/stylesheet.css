@@ -1,0 +1,129 @@
+
+body {
+	min-height:100%;
+	color: white;
+	background-color: black;
+	background-image: url('../img/win95wall.png');
+}
+header{
+	text-align: center;
+	font-family: Microsoft Sans Serif;
+	color: white;
+	width: 100%;
+	display: block;
+	text-decoration: none;
+}
+footer{
+	text-align: center;
+	bottom:0;
+	width:100%;
+	height:50px;
+}
+
+
+table {  
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0;
+}
+
+
+a{
+	color: white;
+}
+
+
+section {
+	background-color: #ffffff;
+	position: relative;
+	padding: 10px 40px 10px 50px;
+}
+
+article {
+	
+	font-size: 16px;
+	font-family: Microsoft Sans Serif;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 10px 10px;
+}
+#info p{
+	color: white;
+}
+
+td{
+	vertical-align: top;
+	padding: 10px;
+}
+#window{
+	overflow-y: scroll;
+	display: inline-block;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	border: 3px solid black;
+	color: black;
+}
+#title {
+	background-color: navy;
+	color: white;
+	border: 3px groove grey;
+	text-align: left;
+}
+#navi {
+	background-color: white;
+	text-align: center;
+	float: left;
+	width: 24.99%;
+	height: 100%
+}
+#contents{
+	background-color: white;
+	float: right;
+	width: 75%;
+	padding-bottom: 20px;
+}
+#menu{
+	background-color: #cccccc;
+	color: black;
+	border: 1px solid black;
+}
+#bottomgrey{
+	border: 1px solid black;
+	width: 100%;
+	background-color: #cccccc;
+	color: black;
+	position: absolute;
+	bottom: 0;
+	text-align: right;
+}
+.icon{
+	width: 24px;
+	height: 24px;
+}
+.deskIcon{
+	width: 48px;
+	height: 48px;
+}
+.files{
+	width: 100%;
+	
+}
+.files td{
+	border-left: 1px dotted black;
+	
+}
+.files th{
+	background-color: #cccccc;
+	border-right: 1px solid black;
+}
+
+#deskShort{
+	display: inline-block;
+	overflow: hidden;
+	
+}
+
+
+

@@ -14,6 +14,7 @@
 			This is where information about all my IT projects is hosted.<br><br>
 			This page is still under construction.
 		</p>
+		<?php include '../php/allproject.php';?>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
   </body>

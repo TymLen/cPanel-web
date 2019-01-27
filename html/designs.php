@@ -14,6 +14,7 @@
 			This page contains designs that are not part of a project that but I still liked.<br><br>
 			This page is still under construction.
 		</p>
+		<?php include '../php/alldesigns.php';?>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
   </body>

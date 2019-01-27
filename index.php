@@ -7,7 +7,7 @@
   </head>
   <body>	
 	<header>
-		<a href="./index.php"><img class = "banner" src = "./img/bannertext.png" alt="Banner Text"></a>
+		<a href="./index.php"><img class = "banner" src = "./img/bannertextAlt2.png" alt="Banner Text"></a>
 			<div class="navbar">
 				<a href="./html/projects.php">Projects</a>
 				<a href="./html/designs.php">Designs</a>
