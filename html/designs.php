@@ -9,6 +9,7 @@
 	<header>
 			<?php include '../php/header.php';?>
 	</header>	
+	<div class ="flex">
 	<article>
 		<p id="info">
 			This page contains designs that are not part of a project that but I still liked.<br><br>
@@ -17,5 +18,6 @@
 		<?php include '../php/alldesigns.php';?>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
+	</div>
   </body>
 </html>

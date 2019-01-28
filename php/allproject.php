@@ -21,6 +21,7 @@ if($result->num_rows > 0){
 		echo '<th>Type</th>';
 		echo '<th>Name</th>';
 		echo '<th>Date</th>';
+		echo '<th>Description</th>';
 	echo '</tr>';	
     while($row = $result->fetch_assoc()){   
 		echo '<tr>';
@@ -36,6 +37,7 @@ if($result->num_rows > 0){
 			}else{
 				echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
 			}
+			echo '<td>'.$row["info"].'</td>';
 			
         echo '</tr>';
     }

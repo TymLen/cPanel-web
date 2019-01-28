@@ -9,6 +9,7 @@
 	<header>
 			<?php include '../php/header.php';?>
 	</header>	
+	<div class ="flex">
 	<article>
 		<p id="info">
 			This is where information about my courses is hosted. <br><br>
@@ -17,5 +18,6 @@
 		<?php include '../php/allcourse.php';?>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
+	</div>
   </body>
 </html>

@@ -1,8 +1,11 @@
 html{
-	min-height:100vh;
+	height:100%;
 }
 body {
+	overflow: scroll;
 	margin: 0;
+	padding: 0;
+	min-height: 100%;
 	background-color: black;
 	background-image: url('../img/whiteback.png');
 	background-size: cover;
@@ -16,12 +19,34 @@ header{
 	text-decoration: none;
 }
 footer{
+	clear: both;
 	text-align: center;
-	position: absolute;
-	bottom:0;
-	width:100%;
-	height:50px;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font-size: 18px;
+	color: white;
+	background-color: #d1b3ff;
 }
+.flex{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+article {
+	border-radius: 25px;
+	background-color:#f2e6ff;
+	font-size: 16px;
+	font-family: Microsoft Sans Serif;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 10px 10px;
+	overflow: hidden;
+}
+
 table {  
     border-collapse: collapse;
 }
@@ -35,21 +60,6 @@ a{
 }
 
 
-section {
-	background-color: #ffffff;
-	position: relative;
-	padding: 10px 40px 10px 50px;
-}
-
-article {
-	height: 100;
-	background-color:#f2e6ff;
-	font-size: 16px;
-	font-family: Microsoft Sans Serif;
-	margin-left: 5%;
-	margin-right: 5%;
-	padding: 10px 10px;
-}
 #info p{
 	color: white;
 }
@@ -125,7 +135,6 @@ td{
 	
 }
 .navbar {
-	
 	text-align: center;
 	font-size: 16px;
 	color: white;
@@ -133,11 +142,19 @@ td{
 	background-color: #d1b3ff;
 }
 
+@keyframes navSelect{
+	from {background-color: #d1b3ff;}
+	to {background-color: #a366ff;}
+}
+
 .navbar a:hover {
+	animation-name: navSelect;
+	animation-duration: 1s;
 	background-color: #a366ff;
 }
 
 .navbar a {
+	border-radius: 10px;
 	color: white;
 	padding: 13px 10px;
 	text-decoration: none;

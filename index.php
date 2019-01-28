@@ -7,13 +7,9 @@
   </head>
   <body>	
 	<header>
-		<a href="./index.php"><img class = "banner" src = "./img/bannertextAlt2.png" alt="Banner Text"></a>
-			<div class="navbar">
-				<a href="./html/projects.php">Projects</a>
-				<a href="./html/designs.php">Designs</a>
-				<a href="./html/edu.php">Education</a>
-			</div>
+		<?php include './php/indexheader.php';?>
 	</header>	
+	<div class ="flex">
 	<article>
 		<p id="info">
 			Welcome to my website which I use to develop my skills and also host information about my projects.<br><br>
@@ -28,5 +24,6 @@
 		<?php include './php/latestcourse.php';?>
 	</article>
 	<footer><?php include './php/footer.php';?></footer>
+	</div>
   </body>
 </html>

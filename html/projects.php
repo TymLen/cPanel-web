@@ -5,10 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     <title>Protyme Underconstruction</title>
   </head>
+  
   <body>	
 	<header>
 			<?php include '../php/header.php';?>
 	</header>	
+	<div class ="flex">
 	<article>
 		<p id="info">
 			This is where information about all my IT projects is hosted.<br><br>
@@ -17,5 +19,7 @@
 		<?php include '../php/allproject.php';?>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
+	</div>
   </body>
+  
 </html>
