@@ -12,10 +12,11 @@ $conn = mysqli_connect($config['servername'], $config['username'], $config['pass
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM projectshort ORDER BY begin DESC";
+$sql = "SELECT * FROM projectshort LEFT JOIN projectlong ON projectshort.id=projectlong.proid ORDER BY begin DESC";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
+	$disc = "";
 	echo '<table class="files">';
 	echo '<tr>';
 		echo '<th>Type</th>';
@@ -31,9 +32,14 @@ if($result->num_rows > 0){
 			else{
 				echo '<td><img alt="No picture" title="No picture yet" class= "icon" src="./img/noIcon.png">'.'</td>';
 			}
-			echo '<td>'.$row["title"]. '</td>';
+			if($row["longdisc"] === NULL){
+				$disc = $row["info"];
+			}else{
+				$disc = $row["longdisc"];
+			}
+			echo '<td><a title="Click for more info" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"]. '</a></td>';
 			if(is_null($row["end"])){
-				echo'<td>'.date("d-m-Y");
+				echo'<td>Ongoing</td>';
 			}else{
 				echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
 			}
