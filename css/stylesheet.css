@@ -63,17 +63,6 @@ td{
 	vertical-align: top;
 	padding: 10px;
 }
-#window{
-	margin-left: 5%;
-	margin-right: 5%;
-	overflow-y: scroll;
-	display: inline-block;
-	background-color: white;
-	overflow: hidden;
-	position: relative;
-	border: 3px solid black;
-	color: black;
-}
 #title {
 	background-color: navy;
 	color: white;
@@ -113,9 +102,7 @@ td{
 	width: 50%;
 	border: 1px dotted black;
 }
-.files td{
-	
-}
+
 .files th{
 	background-color: #d1b3ff;
 }
@@ -124,8 +111,8 @@ td{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-height: 90px;
-	max-width: 728px;
+	max-height: 60px;
+	max-width: 480px;
 }
 
 #deskShort{
@@ -187,8 +174,33 @@ td{
 	font-size: 28px;
 }
 .subheading{
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 }
-
-
+.grid-box{
+	display: inline-grid;
+	grid-template-columns: auto auto;
+}
+.grid-item{
+	display: block;
+	border: 1px solid black;
+	padding: 20px;
+	font-size: 16px;
+	text-align: center;
+}
+.projectIcon{
+	width: auto;
+	height: 72px;
+}
+.projectIconArt{
+	width: auto;
+	height: 40%;
+	float:left;
+	padding: 20px;
+}
+.media{
+	text-align: left;
+}
+.description{
+	text-align: left;
+}

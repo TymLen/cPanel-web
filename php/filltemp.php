@@ -22,10 +22,12 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
 	$row = $result->fetch_assoc();
-	echo'<div class ="protitle">'.$row["title"].'</div>';
-	echo'<div class="subheading">Discription</div>';
-	echo'<div class="discription">'.$row["longdisc"].'</div>';
-	echo'<div class="subheading">Media</div>';
+	echo'<div class ="protitle">'.$row["title"].'</div><br><br>';
+	echo '<img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIconArt" src= "../img/'.$row["picture"].'.png">';
+	echo'<div class="subheading">Description</div><br>';
+	echo'<div class="description">'.$row["longdisc"];
+	echo '</div><br><br>';
+	echo'<div class="subheading">Media</div><br>';
 	echo'<div class="media">'.$row["media"].'</div>';
 }else{
     echo "0 results";

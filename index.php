@@ -4,11 +4,14 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+	<link rel="icon" type="image/png" href="./img/favicon.png">
     <title>Protyme Underconstruction</title>
   </head>
   <body>	
 	<header>
-		<?php include './php/indexheader.php';?>
+		<?php include './php/header.php';
+			showHeader(basename(__FILE__));
+		?>
 	</header>	
 	<div class ="flex">
 	<article>
@@ -21,7 +24,9 @@
 			<a href="https://protyme.herokuapp.com/" rel="noopener noreferrer" target="_blank"><img class = "deskIcon" src = "./img/nodeIcon.png" alt="nodejs Icon"><br>Node.js Portfolio</a><br><br>
 		</div>
 		<h2><a href="./html/projects.php" title="See all Projects">Recent Projects</a>:</h2> 
-		<?php include './php/latestproject.php';?>
+		<?php include './php/selectProject.php';
+				getProjects("LATEST");
+			?>
 		<h2><a href="./html/edu.php" title="See all Education">Recent Education</a>: </h2>
 		<?php include './php/latestcourse.php';?>
 	</article>
