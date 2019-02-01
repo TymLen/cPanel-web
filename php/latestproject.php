@@ -12,7 +12,7 @@ $conn = mysqli_connect($config['servername'], $config['username'], $config['pass
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM projectshort WHERE end IS NULL";
+$sql = "SELECT * FROM projectshort LEFT JOIN projectlong ON projectshort.id=projectlong.proid WHERE end IS NULL";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
@@ -21,7 +21,6 @@ if($result->num_rows > 0){
 		echo '<th>Type</th>';
 		echo '<th>Name</th>';
 		echo '<th>Date</th>';
-		echo '<th>Description</th>';
 	echo '</tr>';	
     while($row = $result->fetch_assoc()){   
 		echo '<tr>';
@@ -31,14 +30,12 @@ if($result->num_rows > 0){
 			else{
 				echo '<td><img alt="No picture" title="No picture yet" class= "icon" src="./img/noIcon.png">'.'</td>';
 			}
-			echo '<td>'.$row["title"]. '</td>';
+			echo '<td><a title="'.$row["info"].'" href="./html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"]. '</a></td>';
 			if(is_null($row["end"])){
-				echo'<td>'.date("d-m-Y");
+				echo'<td>Ongoing</td>';
 			}else{
 				echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
-			}
-			echo'<td>'.$row["info"].'</td>';
-			
+			}			
         echo '</tr>';
     }
 	echo '</table>';
