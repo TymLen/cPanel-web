@@ -41,7 +41,12 @@ function getProjects($select){
 						}else{
 							$disc = $row["longdisc"];
 						}
-						echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"];
+						echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"].'<br>';
+						if(is_null($row["end"])){
+							echo'<td>(In Development)</td>';
+						}else{
+							echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
+						}	
 					echo '</a>';
 					echo '</div>';
 				}
