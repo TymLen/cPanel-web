@@ -38,6 +38,7 @@ footer{
 }
 
 article {
+	min-height: 100vh;
 	border-radius: 25px;
 	background-color:#f2e6ff;
 	font-size: 16px;
@@ -48,22 +49,10 @@ article {
 	overflow: hidden;
 }
 
-table {  
-    border-collapse: collapse;
-}
-th, td {
-    padding: 0;
-}
-
-
 a{
 	color: black;
 }
 
-td{
-	vertical-align: top;
-	padding: 10px;
-}
 #title {
 	background-color: navy;
 	color: white;
@@ -98,14 +87,33 @@ td{
 	width: 48px;
 	height: 48px;
 }
-.files{
+.files {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 50%;
+	display: table;
+	border-collapse: collapse;
+	border-spacing: 2px;
+	border: 1px solid grey;
 	text-align: center;
-	width: 50%;
-	border: 1px dotted black;
 }
 
 .files th{
+	font-weight: bold;
+	vertical-align: middle;
+	border-color: inherit;
 	background-color: #d1b3ff;
+}
+.files tr{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+.files td, th{
+	border: 1px solid grey;
+	padding: 10px;
+	display: table-cell;
+	vertical-align: inherit;
 }
 .banner{
 	width: auto;
@@ -132,8 +140,7 @@ td{
 	border-radius: 4px;
 	color: black;
 	padding: 13px;
-	text-decoration: none;
-	
+	text-decoration: none;	
 }
 .header-nav a.here{
 	background-color: #a366ff;
@@ -194,14 +201,71 @@ td{
 	height: 72px;
 }
 .projectIconArt{
-	max-width: 30%;
+	max-width: 100%;
 	max-height: auto;
 	float: left;
 	padding: 5%;
+}
+.projectPic{
+	max-width: 600px;
+	max-height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	margin-right: auto;
 }
 .media{
 	text-align: left;
 }
 .description{
 	text-align: left;
+}
+
+.slideshow-box{
+	border: 5px dashed grey;
+	margin: auto;
+	background-color: black;
+	width: 600px;
+	height: 500px;
+	max-height: 60%;
+	max-width: 60%;
+	position: relative;
+}
+.proSlide{
+	display: none;
+}
+.backPic, .forwardPic{
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color:white;
+	background-color: black;
+	font-weight: bold;
+	font-size: 24px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.forwardPic{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.backPic{
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+.slideNum{
+	font-weight: bold;
+	color: #f2f2f2;
+	background-color:black;
+	font-size: 16px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }

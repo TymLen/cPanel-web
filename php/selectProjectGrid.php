@@ -62,8 +62,9 @@ function getProjects($select){
 			
 			if($result->num_rows > 0){
 				echo '<table class="files">';
+				echo'<caption><div class ="protitle"><a href="./html/projects.php" title="See all Projects">Recent Projects</a></div><br>';
 				echo '<tr>';
-					echo '<th>Type</th>';
+					echo '<th>Icon</th>';
 					echo '<th>Name</th>';
 					echo '<th>Date</th>';
 				echo '</tr>';	
@@ -83,7 +84,7 @@ function getProjects($select){
 						}			
 					echo '</tr>';
 				}
-				echo '</table>';
+				echo '</table><br><br>';
 			}else{
 				echo "Database error";
 			}

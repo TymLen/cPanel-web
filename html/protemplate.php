@@ -4,7 +4,10 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<link rel="icon" type="image/png" href="../img/favicon.png"/>
+	<script type="text/javascript" src="../js/slideshow.js"></script>
+	<script type="text/javascript" src="../js/startSlideJQ.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	<script type="text/javascript" src="../js/startSlideJQ.js"></script>
     <title>Protyme Underconstruction</title>
   </head>
   <body>	

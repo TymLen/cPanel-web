@@ -17,6 +17,7 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
 	echo '<table class="files">';
+	echo '<caption><div class ="protitle"><a href="./html/edu.php" title="See all Education">Recent Education</a></div><br></caption>';
 	echo '<tr>';
 		echo '<th>Name</th>';
 		echo '<th>School</th>';
@@ -29,10 +30,9 @@ if($result->num_rows > 0){
 			echo '<td>'.date("d-m-Y", strtotime($row["date"])). '</td>';
         echo '</tr>';
     }
-	echo '</table>';
+	echo '</table><br><br>';
 }else{
     echo "0 results";
 }
-
 mysqli_close($conn); 
 ?> 

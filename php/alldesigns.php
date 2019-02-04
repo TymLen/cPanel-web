@@ -22,8 +22,8 @@ if($result->num_rows > 0){
 		echo '<th>Link</th>';
 	echo '</tr>';	
     while($row = $result->fetch_assoc()){   
-			echo '<td>'.$row["date"]. '</td>';
-			echo '<td>'.$row["link"]. '</td>';
+		echo '<td>'.date("d-m-Y", strtotime($row["date"])). '</td>';
+		echo '<td>'.$row["link"]. '</td>';
         echo '</tr>';
     }
 	echo '</table>';
