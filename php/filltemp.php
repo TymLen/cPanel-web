@@ -40,6 +40,9 @@ if($result->num_rows > 0){
 				echo 	'<div class="proSlide">';
 				echo 		'<div class="slideNum">'.$count.'/'.$max.'</div>';
 				echo 		'<img class="projectPic" src="'.$image.'">';
+				$caption = explode("/", $image);
+				$file = explode(".", $caption[sizeof($caption)-1]);
+				echo 		'<div class="slideCaption">'.$file[0].'</div>';
 				echo 	'</div>';
 			}
 			echo '<a class="backPic" onclick="plusSlides(-1)">&#10094; Back</a>';

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<link rel="icon" type="image/png" href="../img/favicon.png"/>
     <title>Protyme Underconstruction</title>
   </head>
   <body>	

@@ -264,8 +264,17 @@ a{
 	font-weight: bold;
 	color: #f2f2f2;
 	background-color:black;
-	font-size: 16px;
+	font-size: 24px;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
+}
+.slideCaption{
+	background-color: black;
+	font-style: italic;
+	color: white;
+	position: absolute;
+	font-size: 24px;
+	top: 0;
+	right: 0;
 }
