@@ -71,7 +71,7 @@ function getProjects($select){
 				while($row = $result->fetch_assoc()){   
 					echo '<tr>';
 						if(file_exists('./img/'.$row["picture"].'.png')){
-							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "icon" src= "./img/'.$row["picture"].'.png">'.'</td>';
+							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIcon" src= "./img/'.$row["picture"].'.png">'.'</td>';
 						}
 						else{
 							echo '<td><img alt="No picture" title="No picture yet" class= "icon" src="./img/noIcon.png">'.'</td>';
