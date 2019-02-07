@@ -7,7 +7,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: 100%;
-	background-color: black;
+	background-color: #202020;
 	background-image: url('../img/whiteback.png');
 	background-size: cover;
 }
@@ -27,7 +27,7 @@ footer{
 	width: 100%;
 	font-size: 18px;
 	color: white;
-	background-color: #a366ff;
+	background-color: #ae77ff;
 }
 .flex{
 	display: flex;
@@ -48,7 +48,7 @@ article {
 }
 
 a{
-	color: black;
+	color: #202020;
 }
 
 #title {
@@ -65,14 +65,14 @@ a{
 }
 #menu{
 	background-color: #cccccc;
-	color: black;
-	border: 1px solid black;
+	color: #202020;
+	border: 1px solid #202020;
 }
 #bottomgrey{
-	border: 1px solid black;
+	border: 1px solid #202020;
 	width: 100%;
 	background-color: #cccccc;
-	color: black;
+	color: #202020;
 	position: absolute;
 	bottom: 0;
 	text-align: right;
@@ -96,7 +96,7 @@ a{
 	display: table;
 	border-collapse: collapse;
 	border-spacing: 2px;
-	border: 1px solid grey;
+	border: 1px solid #202020;
 	text-align: center;
 }
 
@@ -112,7 +112,7 @@ a{
 	border-color: inherit;
 }
 .files td, th{
-	border: 1px solid grey;
+	border: 1px solid #202020;
 	padding: 10px;
 	display: table-cell;
 	vertical-align: inherit;
@@ -187,17 +187,31 @@ a{
 }
 .grid-box{
 	display: grid;
-	grid: auto 49% / repeat(2, 50%);
+	grid: auto 49% / repeat(4, 25%);
+}
+.proName{
+	color: white;
 }
 .grid-item{
-	display: block;
+	background-color: #202020;
+	border: 1px solid white;
 	padding: 20px;
 	font-size: 16px;
 	text-align: center;
 }
 .projectIcon{
+	width: 100%;
+	height: auto;
+}
+.projectIconIndex{
+	height: 25%;
 	width: auto;
-	height: 72px;
+	margin: auto;
+}
+.proPicBox{
+	display: flex;
+	align-items: center;
+	height: 95%;
 }
 .projectIconArt{
 	max-width: 100%;
@@ -226,12 +240,15 @@ a{
 .slideshow-box{
 	border: 5px dashed grey;
 	margin: auto;
-	background-color: black;
+	background-color: #202020;
 	width: 600px;
 	height: 500px;
 	max-height: 60%;
 	max-width: 60%;
 	position: relative;
+}
+iframe{
+	padding: 10px;
 }
 .proSlide{
 	display: none;
@@ -242,9 +259,9 @@ a{
 	top: 90%;
 	width: auto;
 	margin-top: -22px;
-	padding: 16px;
+	padding: 5px;
 	color:white;
-	background-color: black;
+	background-color: #202020;
 	font-weight: bold;
 	font-size: 24px;
 	transition: 0.6s ease;
@@ -262,14 +279,14 @@ a{
 .slideNum{
 	font-weight: bold;
 	color: #f2f2f2;
-	background-color:black;
+	background-color:#202020;
 	font-size: 24px;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
 }
 .slideCaption{
-	background-color: black;
+	background-color: #202020;
 	font-style: italic;
 	color: white;
 	position: absolute;

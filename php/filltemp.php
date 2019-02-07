@@ -23,6 +23,11 @@ $result = $conn->query($sql);
 if($result->num_rows > 0){
 	$row = $result->fetch_assoc();
 	echo '<div class ="protitle">'.$row["title"].'</div><br><br>';
+	
+	echo'<div class="subheading">Description:</div><br>';
+	echo'<div class="description">'.$row["longdisc"];
+	echo '</div><br><br>';
+	echo'<div class="subheading">Media:</div><br>';
 	if(!is_null($row["folder"])){
 		$directory = "../img/".$row["folder"];
 		$images = glob($directory ."/*.png");
@@ -33,15 +38,16 @@ if($result->num_rows > 0){
 		foreach($images as $image){
 			
 			$max = $max +1;
-		}if(!$max <= 0){
+		}
+		if(!$max <= 0){
 			echo 	'<div class="slideshow-box">';
 			foreach($images as $image){
 				$count = $count + 1;
-				echo 	'<div class="proSlide">';
-				echo 		'<div class="slideNum">'.$count.'/'.$max.'</div>';
+				echo 	'<div class="proSlide">';			
 				echo 		'<img class="projectPic" src="'.$image.'">';
 				$caption = explode("/", $image);
 				$file = explode(".", $caption[sizeof($caption)-1]);
+				echo 		'<div class="slideNum">'.$count.'/'.$max.'</div>';
 				echo 		'<div class="slideCaption">'.$file[0].'</div>';
 				echo 	'</div>';
 			}
@@ -50,11 +56,10 @@ if($result->num_rows > 0){
 			echo '</div>';
 		}
 	}
-	echo'<div class="subheading">Description</div><br>';
-	echo'<div class="description">'.$row["longdisc"];
-	echo '</div><br><br>';
-	echo'<div class="subheading">Media</div><br>';
-	echo'<div class="media">'.$row["media"].'</div>';
+	if(!is_null($row["media"])){
+		echo'<div class="media">'.$row["media"].'</div>';
+	}
+	
 
 }else{
     echo "0 results";

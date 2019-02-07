@@ -30,27 +30,29 @@ function getProjects($select){
 				while($row = $result->fetch_assoc()){  
 					echo '<div class="grid-item">';
 					echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">';
+					echo '<div class="proPicBox">';
 						if(file_exists('../img/'.$row["picture"].'.png')){
-							echo '<img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIcon" src= "../img/'.$row["picture"].'.png"><br>';
+							echo '<img alt="'.$row["picture"].'" title="'.$row["info"].'" class= "projectIcon" src= "../img/'.$row["picture"].'.png"><br>';
 						}
 						else{
-							echo '<img alt="No picture" title="No picture yet" class= "icon" src="./img/noIcon.png"><br>';
+							echo '<img alt="No picture" title="No picture yet" class= "projectIcon" src="./img/noIcon.png"><br>';
 						}
+						echo'</div>';
 						if($row["longdisc"] === NULL){
 							$disc = $row["info"];
 						}else{
 							$disc = $row["longdisc"];
 						}
-						echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"].'<br>';
+						echo '<div class="proName" title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"].'<br>';
 						if(is_null($row["end"])){
 							echo'<td>(In Development)</td>';
 						}else{
 							echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
 						}	
-					echo '</a>';
+					echo '</div>';
 					echo '</div>';
 				}
-				echo '</div>';
+				echo '</a>';
 			}else{
 				echo "Database Error";
 			}	
@@ -71,10 +73,10 @@ function getProjects($select){
 				while($row = $result->fetch_assoc()){   
 					echo '<tr>';
 						if(file_exists('./img/'.$row["picture"].'.png')){
-							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIcon" src= "./img/'.$row["picture"].'.png">'.'</td>';
+							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIconIndex" src= "./img/'.$row["picture"].'.png">'.'</td>';
 						}
 						else{
-							echo '<td><img alt="No picture" title="No picture yet" class= "icon" src="./img/noIcon.png">'.'</td>';
+							echo '<td><img alt="No picture" title="No picture yet" class= "projectIconIndex" src="./img/noIcon.png">'.'</td>';
 						}
 						echo '<td><a title="'.$row["info"].'" href="./html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"]. '</a></td>';
 						if(is_null($row["end"])){
