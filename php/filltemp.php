@@ -11,6 +11,7 @@ if(isset($_GET["projectid"])){
 }
 // Create connection
 $conn = mysqli_connect($config['servername'], $config['username'], $config['password'], $config['database']);
+mysqli_set_charset($conn, 'utf8');
 
 // Check connection
 if (!$conn) {
@@ -18,6 +19,7 @@ if (!$conn) {
 }
 
 $sql = "SELECT * FROM projectshort LEFT JOIN projectlong ON projectshort.id=projectlong.proid  WHERE id = '".$id."' ORDER BY begin DESC";
+
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
@@ -25,8 +27,11 @@ if($result->num_rows > 0){
 	echo '<div class ="protitle">'.$row["title"].'</div><br><br>';
 	
 	echo'<div class="subheading">Description:</div><br>';
-	echo'<div class="description">'.$row["longdisc"];
-	echo '</div><br><br>';
+	echo'<div class="description">'.$row["longdisc"].'</div><br><br>';
+	echo'<div class="subheading">Challenges:</div><br>';
+	echo'<div class="description">'.$row["challenges"].'</div><br><br>';
+	echo'<div class="subheading">Solution:</div><br>';
+	echo'<div class="description">'.$row["solution"].'</div><br><br>';
 	echo'<div class="subheading">Media:</div><br>';
 	if(!is_null($row["folder"])){
 		$directory = "../img/".$row["folder"];

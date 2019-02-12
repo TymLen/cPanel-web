@@ -19,11 +19,6 @@
 	<div class ="flex">
 	<article>
 	<div id="projects"></div>
-		<p id="info">
-			This is where information about all my IT projects is hosted.<br><br>
-			This page is still under construction.<br><br>	
-			Hover over project name for brief discription or click on name to see project page.
-		</p>
 		<?php include '../php/selectProjectGrid.php';
 			getProjects("ALL");
 		?>

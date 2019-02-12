@@ -20,6 +20,7 @@
 		<p id="info">
 			Welcome to my website which I use to develop my skills and also host information about my projects.<br><br>
 			This website is still in active development with new design and features being added often.
+			
 		</p>
 		
 		<?php 
