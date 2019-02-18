@@ -24,15 +24,16 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
 	$row = $result->fetch_assoc();
-	echo '<div class ="protitle">'.$row["title"].'</div><br><br>';
-	
-	echo'<div class="subheading">Description:</div><br>';
+	echo '<div class ="protitle">'.$row["title"].'</div><br>';
+	echo'<div class ="proNav"><img class="downIcon" src="../img/downarrow.png"><a href="#disc"> Description</a> 
+	<a href="#challenge">Challenges</a> <a href=#solution>Solution</a> <a href="#media">Media</a><img class="downIcon" src="../img/downarrow.png"></div><br>';
+	echo'<a name="disc"></a><div class="subheading">Description:</div><br>';
 	echo'<div class="description">'.$row["longdisc"].'</div><br><br>';
-	echo'<div class="subheading">Challenges:</div><br>';
+	echo'<a name="challenge"></a><div class="subheading">Challenges: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
 	echo'<div class="description">'.$row["challenges"].'</div><br><br>';
-	echo'<div class="subheading">Solution:</div><br>';
+	echo'<a name="solution"></a><div class="subheading">Solution: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
 	echo'<div class="description">'.$row["solution"].'</div><br><br>';
-	echo'<div class="subheading">Media:</div><br>';
+	echo'<a name="media"></a><div class="subheading">Media: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
 	if(!is_null($row["folder"])){
 		$directory = "../img/".$row["folder"];
 		$images = glob($directory ."/*.png");

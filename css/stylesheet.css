@@ -18,6 +18,10 @@ header{
 	width: 100%;
 	text-decoration: none;
 }
+.headBox{
+	margin-left: 5%;
+}
+
 footer{
 	clear: both;
 	text-align: center;
@@ -27,7 +31,7 @@ footer{
 	width: 100%;
 	font-size: 18px;
 	color: white;
-	background-color: #ae77ff;
+	background-color: #a16af3;
 }
 .flex{
 	display: flex;
@@ -38,7 +42,6 @@ footer{
 
 article {
 	min-height: 100vh;
-	border-radius: 25px;
 	background-color:#f2e6ff;
 	font-size: 16px;
 	margin-left: 5%;
@@ -77,6 +80,28 @@ a{
 	bottom: 0;
 	text-align: right;
 }
+.social{
+	background-color: #9048fc;
+	float: right;
+	height: 100%;
+	width: 5%;
+	padding-bottom: 6px;
+}
+.socialIcon{
+	margin: auto;
+	width: 30px;
+	height: auto;
+	display: block;
+	padding: 10px;
+}
+.rightIcon{
+	width: 20px;
+	height: auto;
+}
+.downIcon{
+	width: 20px;
+	height: auto;
+}
 .icon{
 	width: 100%;
 	height: 100%;
@@ -88,6 +113,10 @@ a{
 .deskIcon{
 	width: 48px;
 	height: 48px;
+}
+caption{
+	font-size: 24px;
+	font-weight: bold;
 }
 .files {
 	margin-left: auto;
@@ -104,7 +133,8 @@ a{
 	font-weight: bold;
 	vertical-align: middle;
 	border-color: inherit;
-	background-color: #d1b3ff;
+	background-color: #a16af3;
+	color: white;
 }
 .files tr{
 	display: table-row;
@@ -118,10 +148,11 @@ a{
 	vertical-align: inherit;
 }
 .banner{
+	display: block;
+	margin: auto;
 	width: auto;
 	height: 50px;
-	padding-left: 50px;
-	padding-top: 10px;
+	padding: 10px;
 }
 
 #deskShort{
@@ -130,6 +161,7 @@ a{
 }
 
 .header-nav{
+	clear: left;
 	text-align: center;
 }
 .header-nav a{
@@ -137,24 +169,24 @@ a{
 	font-size: 18px;
 	border-radius: 4px;
 	color: black;
-	padding: 13px;
+	padding: 10px;
 	top: 0;
 	text-decoration: none;	
 }
 .header-nav a.here{
-	background-color: #a366ff;
+	background-color: #a16af3;
 	color: white;
 }
 @keyframes navSelect{
 	from {background-color: #d1b3ff;}
-	to {background-color: #a366ff;}
+	to {background-color: #a16af3;}
 }
 
 .header-nav a.active:hover {
 	color: white;
 	animation-name: navSelect;
 	animation-duration: 1s;
-	background-color: #a366ff;
+	background-color: #a16af3;
 }
 #overlay{
 	position: fixed;
@@ -251,7 +283,7 @@ iframe{
 	padding: 10px;
 }
 .proSlide{
-	display: none;
+	display: block;
 }
 .backPic, .forwardPic{
 	cursor: pointer;
@@ -293,4 +325,62 @@ iframe{
 	font-size: 24px;
 	top: 0;
 	right: 0;
+}
+.proNav{
+	text-align: center;
+}
+.proNav a{
+	font-style: italic;
+	padding-right: 20px;
+	font-size: 18px;
+	border-radius: 4px;
+	color: black;
+	text-decoration: none;	
+}
+.upicon{
+	width: auto;
+	height: 20px;
+}
+.rightnav{
+	font-size: 14px;
+	float: right;
+}
+.splash{
+	padding: 10px;
+	position: relative;
+	background-color: #333333;
+	width: auto;
+	height: 80vh;
+}
+.welcome{
+	opacity: 0.2;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	width: auto;
+	max-width: 80%;
+	max-height: 80vh;
+	margin: auto;
+}
+.splashText{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50%;
+	height: auto;
+	margin: auto;
+}
+.splashSubText{
+	position: absolute;
+	left: 55%;
+	top: 55%;
+	margin: auto;
+	font-size: 24px;
+	font-style: italic;
+	color: white;
 }

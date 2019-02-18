@@ -31,8 +31,8 @@ function getProjects($select){
 					echo '<div class="grid-item">';
 					echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">';
 					echo '<div class="proPicBox">';
-						if(file_exists('../img/'.$row["picture"].'.png')){
-							echo '<img alt="'.$row["picture"].'" title="'.$row["info"].'" class= "projectIcon" src= "../img/'.$row["picture"].'.png"><br>';
+						if(file_exists('../img/icons/'.$row["picture"].'.png')){
+							echo '<img alt="'.$row["picture"].'" title="'.$row["info"].'" class= "projectIcon" src= "../img/icons/'.$row["picture"].'.png"><br>';
 						}
 						else{
 							echo '<img alt="No picture" title="No picture yet" class= "projectIcon" src="./img/noIcon.png"><br>';
@@ -64,7 +64,7 @@ function getProjects($select){
 			
 			if($result->num_rows > 0){
 				echo '<table class="files">';
-				echo'<caption><div class ="protitle"><a href="./html/projects.php" title="See all Projects">Recent Projects</a></div><br>';
+				echo'<caption><a href="./html/projects.php" title="See all Projects">Recent Projects <img class = "rightIcon" src="./img/rightarrow.png"></a>';
 				echo '<tr>';
 					echo '<th>Icon</th>';
 					echo '<th>Name</th>';
@@ -73,7 +73,7 @@ function getProjects($select){
 				while($row = $result->fetch_assoc()){   
 					echo '<tr>';
 						if(file_exists('./img/'.$row["picture"].'.png')){
-							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIconIndex" src= "./img/'.$row["picture"].'.png">'.'</td>';
+							echo '<td><img alt="'.$row["picture"].'" title="'.$row["picture"].'" class= "projectIconIndex" src= "./img/icons/'.$row["picture"].'.png">'.'</td>';
 						}
 						else{
 							echo '<td><img alt="No picture" title="No picture yet" class= "projectIconIndex" src="./img/noIcon.png">'.'</td>';

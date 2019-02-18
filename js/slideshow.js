@@ -1,9 +1,12 @@
 var slideIndex = 0;
+$(document).ready(function(){
+    startSlideShow();
+});
 
 function startSlideShow(){
     
     var slides = document.getElementsByClassName("proSlide");
-    for(i = 0; i < slides.length; i++){
+    for(var i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
     }
     slides[0].style.display = "block";
@@ -17,6 +20,7 @@ function currentSlide(num){
 }
 
 function showSlides(num){
+    
     var i;
     var slides = document.getElementsByClassName("proSlide");
     if(slides.length === 1){
