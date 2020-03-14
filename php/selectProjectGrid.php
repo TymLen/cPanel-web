@@ -25,10 +25,10 @@ function getProjects($select){
 			$result = $conn->query($sql);
 
 			if($result->num_rows > 0){
-				echo '<div class="grid-box">';
+				echo '<div class="row">';
 				
 				while($row = $result->fetch_assoc()){  
-					echo '<div class="grid-item">';
+					echo '<div class="col-sm-3">';
 					echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">';
 					echo '<div class="proPicBox">';
 						if(file_exists('../img/icons/'.$row["picture"].'.png')){
@@ -50,6 +50,8 @@ function getProjects($select){
 							echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
 						}	
 					echo '</div>';
+					echo '<br>';
+					echo '<br>';
 					echo '</div>';
 				}
 				echo '</a>';

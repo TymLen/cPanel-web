@@ -6,7 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 	<link rel="icon" type="image/png" href="../img/favicon.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Protyme Underconstruction</title>
   </head>
   <body>	
@@ -18,8 +20,7 @@
 	<div class ="flex">
 	<article>
 		<p id="info">
-			This is where information about my courses is hosted. <br><br>
-			This page is still under construction.
+			Below are the details of some of my recent courses and education.<br><br>
 		</p>
 		<?php include '../php/allcourse.php';?>
 	</article>

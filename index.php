@@ -9,6 +9,9 @@
 		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/> 
 		<script type="text/javascript" src="./js/welcomeSlides.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </head>
   <body>	
 	<header>
@@ -21,12 +24,13 @@
 	<article>
 	<div class = "splash">
 		<a href ="./html/projects.php">
+		<img class="welcome" src="./img/icons/GHAttackIcon.png">
 		<img class="welcome" src="./img/icons/EscapeIcon.png">
 		<img class="welcome" src="./img/icons/IoTIcon.png">
 		<img class="welcome" src="./img/icons/MobWebIcon.png">
 		<img class="welcome" src="./img/icons/protymeicon.png">
 		<img class="welcome" src="./img/icons/Q4FIcon.png">
-			<img class ="splashText" src="/./img/slidecover.png">
+			<img class ="splashText" src="./img/slidecover2.png">
 			<p class="splashSubText">Projects by Tym</p>
 		</a>
 	</div>

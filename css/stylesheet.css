@@ -8,12 +8,12 @@ body {
 	padding: 0;
 	min-height: 100%;
 	background-color: #202020;
-	background-image: url('../img/whiteback.png');
+	background-image: url('../img/blueback.png');
 	background-size: cover;
 }
 header{
 	overflow: hidden;
-	background-image: url('../img/bannerbg.png');
+	background-image: url('../img/bannerbg2.png');
 	background-size: cover;
 	width: 100%;
 	text-decoration: none;
@@ -31,7 +31,7 @@ footer{
 	width: 100%;
 	font-size: 18px;
 	color: white;
-	background-color: #a16af3;
+	background-color: #8da1fa;
 }
 .flex{
 	display: flex;
@@ -42,7 +42,7 @@ footer{
 
 article {
 	min-height: 100vh;
-	background-color:#f2e6ff;
+	background-color:#eef0f8;
 	font-size: 16px;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -81,7 +81,7 @@ a{
 	text-align: right;
 }
 .social{
-	background-color: #9048fc;
+	background-color: #8da1fa;
 	float: right;
 	height: 100%;
 	width: 5%;
@@ -133,16 +133,16 @@ caption{
 	font-weight: bold;
 	vertical-align: middle;
 	border-color: inherit;
-	background-color: #a16af3;
+	background-color: #8da1fa;
 	color: white;
 }
 .files tr{
 	display: table-row;
 	vertical-align: inherit;
-	border-color: inherit;
+	border-color: white
 }
 .files td, th{
-	border: 1px solid #202020;
+	border: 1px solid white;
 	padding: 10px;
 	display: table-cell;
 	vertical-align: inherit;
@@ -174,19 +174,19 @@ caption{
 	text-decoration: none;	
 }
 .header-nav a.here{
-	background-color: #a16af3;
+	background-color: #8da1fa;
 	color: white;
 }
 @keyframes navSelect{
-	from {background-color: #d1b3ff;}
-	to {background-color: #a16af3;}
+	from {background-color: #d7dfff;}
+	to {background-color: #8da1fa;}
 }
 
 .header-nav a.active:hover {
 	color: white;
 	animation-name: navSelect;
 	animation-duration: 1s;
-	background-color: #a16af3;
+	background-color: #8da1fa;
 }
 #overlay{
 	position: fixed;
@@ -225,15 +225,24 @@ caption{
 	color: white;
 }
 .grid-item{
-	background-color: #202020;
+	background-color:  #363636;
 	border: 1px solid white;
 	padding: 20px;
 	font-size: 16px;
 	text-align: center;
 }
+.row{
+	background-color:   #545e97;
+	border: 1px solid white;
+	font-size: 16px;
+	text-align: center;
+	padding: 40px;
+	overflow: hidden;
+}
 .projectIcon{
-	width: 100%;
-	height: auto;
+	margin:auto;
+	max-width: 100%;
+	max-height: 300px;
 }
 .projectIconIndex{
 	height: 25%;
@@ -348,12 +357,12 @@ iframe{
 .splash{
 	padding: 10px;
 	position: relative;
-	background-color: #333333;
+	background-color: #545e97;
 	width: auto;
 	height: 80vh;
 }
 .welcome{
-	opacity: 0.2;
+	opacity: 0.5;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -371,7 +380,7 @@ iframe{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 50%;
+	width: 40%;
 	height: auto;
 	margin: auto;
 }
@@ -383,4 +392,11 @@ iframe{
 	font-size: 24px;
 	font-style: italic;
 	color: white;
+}
+.tableText{
+	font-size: 24px;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;
+	
 }
