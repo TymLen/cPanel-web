@@ -13,5 +13,4 @@ function carousel(){
     if(slidenum > x.length){slidenum = 1}
     x[slidenum-1].style.display = "block";
     setTimeout(carousel, 5000);
-
 }

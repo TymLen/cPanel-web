@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Protyme Underconstruction</title>
+    <title>Protyme: Education</title>
   </head>
   <body>	
 	<header>
@@ -17,14 +17,13 @@
 			showHeader(basename(__FILE__));
 			?>
 	</header>	
-	<div class ="flex">
 	<article>
-		<p id="info">
-			Below are the details of some of my recent courses and education.<br><br>
+	<div class="article-font">
+		<p class="tableText">Below are the details of some of my recent courses and education.
 		</p>
 		<?php include '../php/allcourse.php';?>
+		</div>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
-	</div>
   </body>
 </html>

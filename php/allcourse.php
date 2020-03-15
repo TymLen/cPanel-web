@@ -16,8 +16,8 @@ $sql = "SELECT * FROM courses WHERE type = 'Cert' ORDER BY date DESC";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 	echo '<p class="tableText">Formal Education</p>';
-	echo '<table class="files">';
-	echo '<tr>';
+	echo '<table class="table table-bordered table-striped">';
+	echo '<tr class="table-primary">';
 		echo '<th>Name</th>';
 		echo '<th>School</th>';
 		echo '<th>Date</th>';
@@ -38,8 +38,9 @@ $sql = "SELECT * FROM courses WHERE type = 'Online' ORDER BY date DESC";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 	echo '<p class="tableText">Online Courses/Accreditations</p>';
-	echo '<table class="files"><caption>Click name to see certificate</caption>';
-	echo '<tr>';
+	echo '<table class="table table-bordered table-striped">';
+	echo' <caption><h5>Click name to see certificate</h5></caption>';
+	echo '<tr class="table-primary">';
 		echo '<th>Name</th>';
 		echo '<th>School</th>';
 		echo '<th>Date</th>';
@@ -55,7 +56,5 @@ if($result->num_rows > 0){
 }else{
     echo "0 results";
 }
-
-
 mysqli_close($conn); 
 ?> 

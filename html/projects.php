@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-	<link rel="icon" type="image/png" href="../img/favicon.png"/>
-	<script src="../html/overlay.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-	 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
-
-    <title>Protyme Underconstruction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Protyme: Projects</title>
   </head>
   <body>	
 	<header>
@@ -27,16 +15,15 @@
 			showHeader(basename(__FILE__));
 			?>
 	</header>	
-	<div class ="flex">
 	<article>
-	<div id="projects"></div>
-		<?php include '../php/selectProjectGrid.php';
-			getProjects("ALL");
-		?>
+	<div class="article-font">
+		<div class="card-deck">
+			<?php include '../php/selectProjectGrid.php';
+				getProjects("ALL");
+			?>
+		</div>
+		</div>
 	</article>
 	<footer><?php include '../php/footer.php';?></footer>
-	</div>
-	<div id="overlay" onclick="hideOverlay()"><div id="longdesc"></div></div>
   </body>
-  
 </html>

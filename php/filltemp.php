@@ -25,24 +25,21 @@ $result = $conn->query($sql);
 if($result->num_rows > 0){
 	$row = $result->fetch_assoc();
 	echo '<div class ="protitle">'.$row["title"].'</div><br>';
-	echo'<div class ="proNav"><img class="downIcon" src="../img/downarrow.png"><a href="#disc"> Description</a> 
-	<a href="#challenge">Challenges</a> <a href=#solution>Solution</a> <a href="#media">Media</a><img class="downIcon" src="../img/downarrow.png"></div><br>';
+	echo'<div class ="proNav"><a href="#disc"> Description</a> 
+	<a href="#challenge">Challenges</a> <a href=#solution>Solution</a> <a href="#media">Media</a></div><br>';
 	echo'<a name="disc"></a><div class="subheading">Description:</div><br>';
 	echo'<div class="description">'.$row["longdisc"].'</div><br><br>';
-	echo'<a name="challenge"></a><div class="subheading">Challenges: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
+	echo'<a name="challenge"></a><div class="subheading">Challenges: </div><br>';
 	echo'<div class="description">'.$row["challenges"].'</div><br><br>';
-	echo'<a name="solution"></a><div class="subheading">Solution: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
+	echo'<a name="solution"></a><div class="subheading">Solution:</div><br>';
 	echo'<div class="description">'.$row["solution"].'</div><br><br>';
-	echo'<a name="media"></a><div class="subheading">Media: <div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div></div><br>';
+	echo'<a name="media"></a><div class="subheading">Media: </div><br>';
 	if(!is_null($row["folder"])){
 		$directory = "../img/".$row["folder"];
 		$images = glob($directory ."/*.png");
 		$max = 0;
-		$count = 0;
-		
-		
-		foreach($images as $image){
-			
+		$count = 0;	
+		foreach($images as $image){	
 			$max = $max +1;
 		}
 		if(!$max <= 0){
@@ -57,19 +54,17 @@ if($result->num_rows > 0){
 				echo 		'<div class="slideCaption">'.$file[0].'</div>';
 				echo 	'</div>';
 			}
-			echo '<a class="backPic" onclick="plusSlides(-1)">&#10094; Back</a>';
-			echo '<a class="forwardPic" onclick="plusSlides(1)">Next &#10095;</a>';
+			echo '<div class="backPic"><a class="backPic" onclick="plusSlides(-1)">&#10094;Back</a></div>';
+			echo '<div class="forwardPic"><a class="forwardPic" onclick="plusSlides(1)">Next&#10095;</a></div>';
 			echo '</div>';
 		}
 	}
 	if(!is_null($row["media"])){
 		echo'<div class="media">'.$row["media"].'</div>';
 	}
-	
-
 }else{
     echo "0 results";
 }
-
+echo '<div class="rightnav"><a href="#">Back to top <img class="upicon" src="../img/uparrow.png"></a></div>';
 mysqli_close($conn); 
 ?> 

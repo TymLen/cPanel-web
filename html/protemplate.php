@@ -7,21 +7,21 @@
 	<link rel="icon" type="image/png" href="../img/favicon.png"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	<script type="text/javascript" src="../js/slideshow.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <title>Protyme Underconstruction</title>
+    <title>Protyme: Project Details</title>
   </head>
   <body>	
-	<header>
 		<?php include '../php/header.php';
 		showHeader(basename(__FILE__));
 		?>
-	</header>	
-	<div class ="flex">
-		<article>		
+		<article>	
+			<div class="article-font">
 			<?php include '../php/filltemp.php';?>
+			</div>
 		</article>
 		<footer><?php include '../php/footer.php';?></footer>
-	</div>
   </body>
 </html>

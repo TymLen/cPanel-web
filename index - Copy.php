@@ -18,27 +18,22 @@
 			include './php/header.php';
 			showHeader(basename(__FILE__));
 		?>
-	
+	<div class ="flex">
 	<article>
 	<div class = "splash">
 		<a href ="./html/projects.php">
-		<?php 
-			$directory = "./img/icons/original/";
-			$images = glob($directory ."/*.png");
-			$max = 0;
-			$count = 0;	
-			foreach($images as $image){	
-				$max = $max +1;
-			}
-			foreach($images as $image){	
-				echo '<img class="welcome" src="'.$image.'">';
-			}
-		?>
+		<img class="welcome" src="./img/icons/GHAttackIcon.png">
+		<img class="welcome" src="./img/icons/EscapeIcon.png">
+		<img class="welcome" src="./img/icons/IoTIcon.png">
+		<img class="welcome" src="./img/icons/MobWebIcon.png">
+		<img class="welcome" src="./img/icons/protymeicon.png">
+		<img class="welcome" src="./img/icons/Q4FIcon.png">
 			<img class ="splashText" src="./img/slidecover2.png">
 			<p class="splashSubText">Projects by Tym</p>
 		</a>
 	</div>
 	</article>
 	<footer><?php include './php/footer.php';?></footer>
+	</div>
   </body>
 </html>

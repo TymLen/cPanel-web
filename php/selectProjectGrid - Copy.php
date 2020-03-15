@@ -23,33 +23,41 @@ function getProjects($select){
 		case "ALL":
 			$sql = "SELECT * FROM projectshort LEFT JOIN projectlong ON projectshort.id=projectlong.proid ORDER BY begin DESC";
 			$result = $conn->query($sql);
-		
+
 			if($result->num_rows > 0){
+				echo '<div class="row">';
+				
 				while($row = $result->fetch_assoc()){  
-					echo '<div class="col-md-4">';
-					echo '<div class="card border-secondary mb-3" style="max-width: 18rem;">';
-					echo '<img class="img-thumbnail" src= "../img/icons/'.$row["picture"].'.png"></img>';
-					echo '<div class="card-body">';
-					if($row["longdisc"] === NULL){
+					echo '<div class="col-sm-3">';
+					echo '<a title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">';
+					echo '<div class="proPicBox">';
+						if(file_exists('../img/icons/'.$row["picture"].'.png')){
+							echo '<img alt="'.$row["picture"].'" title="'.$row["info"].'" class= "projectIcon" src= "../img/icons/'.$row["picture"].'.png"><br>';
+						}
+						else{
+							echo '<img alt="No picture" title="No picture yet" class= "projectIcon" src="./img/noIcon.png"><br>';
+						}
+						echo'</div>';
+						if($row["longdisc"] === NULL){
 							$disc = $row["info"];
 						}else{
 							$disc = $row["longdisc"];
 						}
-						echo '<p class="card-text" max-height="10px">'.$row["info"].'</p>';
-					echo '<div class="d-flex justify-content-between align-items-center">';
-						echo '<div class="btn-group">';
-							echo '<button class="btn btn-sm btn-outline-secondary" onclick=window.location.href="../html/protemplate.php?projectid='.$row["proid"].';">View</button>';
-						echo '</div>';
+						echo '<div class="proName" title="'.$row["info"].'" href="../html/protemplate.php?projectid='.$row["proid"].'">'.$row["title"].'<br>';
+						if(is_null($row["end"])){
+							echo'<td>(In Development)</td>';
+						}else{
+							echo '<td>'.date("d-m-Y", strtotime($row["end"])). '</td>';
+						}	
 					echo '</div>';
-				echo '</div>';
-				echo '</div>';
-				echo '</div>';
+					echo '<br>';
+					echo '<br>';
+					echo '</div>';
 				}
+				echo '</a>';
 			}else{
 				echo "Database Error";
 			}	
-			echo '</div>';
-			echo '</div>';
 			break;
 
 		case "LATEST":
