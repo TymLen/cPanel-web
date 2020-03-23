@@ -23,9 +23,10 @@ header{
 footer{
 	clear: both;
 	text-align: center;
-	position: relative;
 	bottom: 0;
 	left: 0;
+	height: 100px;
+	padding: 10px;
 	width: 100%;
 	font-size: 18px;
 	color: white;
@@ -251,7 +252,7 @@ iframe{
 	position: relative;
 	background-color: #464954;
 	width: auto;
-	height: 50vh;
+	height: 40vh;
 }
 .welcome{
 	opacity: 0.5;
@@ -263,7 +264,7 @@ iframe{
 	height: auto;
 	width: auto;
 	max-width: 80%;
-	max-height: 50vh;
+	max-height: 40vh;
 	margin: auto;
 }
 .splashText{
@@ -272,7 +273,7 @@ iframe{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 40%;
+	width: 20%;
 	height: auto;
 	margin: auto;
 }
@@ -290,4 +291,60 @@ iframe{
 	font-weight: bold;
 	color: #666666;
 	text-align: center;	
+}
+.latestProjectText{
+	font-size: 24px;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;	
+}
+.nav-link{
+	font-size: 24px;
+}
+.nav-link:hover{
+	animation: glow 1s ease-in-out infinite;
+}
+@keyframes jump
+{
+	0%
+	{
+		transform:translateY(0px);
+	}
+	20%
+	{
+		transform:translateY(-10px);
+	}
+	40%, 100%
+	{
+		transform:translateY(0px);
+	}
+}
+@keyframes glow{
+	0%
+	{
+	}
+	20%
+	{
+		color: #8da1fa;
+		text-shadow: 8px 8px 5px #8da1fa;
+	}
+}
+.caraImage{
+	max-width: 100%;
+	max-height: 40vh;
+	display: block;
+  	margin-left: auto;
+	 margin-right: auto;
+	 opacity: 0.5;
+}
+.caraBack{
+	background-color: #545e97;
+}
+.caraText, .caraTextBig{
+	background-color: #545e97;
+	text-shadow: 2px 2px #202020;
+}
+.caraTextBig{
+	font-size: 30px;
+	font-weight: bold;
 }

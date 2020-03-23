@@ -8,12 +8,13 @@
         echo'</button>';
         echo'<div class="collapse navbar-collapse" id="navbarCollapse">';
           echo'<ul class="navbar-nav mr-auto">';
-            echo'<li class="header-nav"><a class="nav-link" href="#">Home</a></li>';		
+            echo'<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';		
 				echo'<li class="header-nav"><a class="nav-link" href="./html/projects.php">Projects</a></li>';		
 				echo'<li class="header-nav"><a class="nav-link" href="./html/edu.php">Education</a></li>';		
           echo'</ul>';
           echo'<form class="form-inline mt-2 mt-md-0">';
-            echo'<a class="socialLink" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="./img/linkedin.png" alt="LinkedIn"><a class="socialLink" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
+            echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="./img/linkedin.png" alt="LinkedIn">';
+            echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
           echo'</form>';
         echo'</div>';
       echo'</nav>';
@@ -26,11 +27,14 @@
         echo'<div class="collapse navbar-collapse" id="navbarCollapse">';
           echo'<ul class="navbar-nav mr-auto">';
             echo'<li class="header-nav"><a class="nav-link" href="../../index.php">Home</a></li>';		
-				echo'<li class="header-nav"><a class="nav-link" href="../html/projects.php">Projects</a></li>';		
-				echo'<li class="header-nav"><a class="nav-link" href="../html/edu.php">Education</a></li>';		
+        if($origin ==='projects.php'){echo'<li class="nav-item active"><a class="nav-link" href="../html/projects.php">Projects</a></li>';}
+        else{echo'<li class="header-nav"><a class="nav-link" href="../html/projects.php">Projects</a></li>';}		
+        if($origin ==='edu.php'){echo'<li class="nav-item active"><a class="nav-link" href="../html/edu.php">Education</a></li>';}
+        else{echo'<li class="header-nav"><a class="nav-link" href="../html/edu.php">Education</a></li>';}		
           echo'</ul>';
           echo'<form class="form-inline mt-2 mt-md-0">';
-            echo'<a class="socialLink" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="../img/linkedin.png" alt="LinkedIn"><a class="socialLink" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
+          echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="../img/linkedin.png" alt="LinkedIn">';
+          echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
           echo'</form>';
         echo'</div>';
       echo'</nav>';
