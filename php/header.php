@@ -1,7 +1,7 @@
 <?php
 	function showHeader($origin){
 		if($origin === 'index.php'){
-			echo'<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">';
+			echo'<nav class="navbar navbar-expand-md navbar-dark fixed-top">';
 				echo'<a class="navbar-brand" href="./index.php"><img class = "banner" src = "./img/bannerTextBlue.png" alt="Banner Text"></a>';
 			echo'<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">';
           echo'<span class="navbar-toggler-icon"></span>';
@@ -19,7 +19,7 @@
         echo'</div>';
       echo'</nav>';
 		}else{
-			echo'<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">';
+			echo'<nav class="navbar navbar-expand-md navbar-dark fixed-top">';
 				echo'<a class="navbar-brand" href="../index.php"><img class = "banner" src = "../img/bannerTextBlue.png" alt="Banner Text"></a>';
 			echo'<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">';
           echo'<span class="navbar-toggler-icon"></span>';

@@ -4,40 +4,25 @@
 		<title>Protyme Portfolio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/> 
-		<script type="text/javascript" src="./js/welcomeSlides.js"></script>
+		<script type="text/javascript" src="./js/loader.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
 		<link href="Carousel%20Template%20%C2%B7%20Bootstrap_files/carousel.css" rel="stylesheet">
-		<style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
   </head>
-  <body>	
+  <body onload="timeout()" style="margin:0;">	
 		<?php 
 			include './php/header.php';
 			showHeader(basename(__FILE__));
 		?>
 	
 	<article>
-		<div class=caraBack>
+    <div id="content" class="animate-bottom">
+		<div class="caraBack">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -94,7 +79,9 @@
 		getLatestProjects();
 		?>
 	</div>
-	</div>
+  </div>
+</div>
+<div id="loader"></div>
 	</article>
 	<footer><?php include './php/footer.php';?></footer>
   </body>
