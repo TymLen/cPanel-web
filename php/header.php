@@ -13,8 +13,8 @@
 				echo'<li class="header-nav"><a class="nav-link" href="./html/edu.php">Education</a></li>';		
           echo'</ul>';
           echo'<form class="form-inline mt-2 mt-md-0">';
-            echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="./img/linkedin.png" alt="LinkedIn">';
-            echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
+            echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="./img/linkedin.png" alt="LinkedIn"/></a>';
+            echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"/></a>';
           echo'</form>';
         echo'</div>';
       echo'</nav>';
@@ -33,8 +33,8 @@
         else{echo'<li class="header-nav"><a class="nav-link" href="../html/edu.php">Education</a></li>';}		
           echo'</ul>';
           echo'<form class="form-inline mt-2 mt-md-0">';
-          echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="../img/linkedin.png" alt="LinkedIn">';
-          echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"></a>';
+          echo'<a class="navbar-brand" href="https://www.linkedin.com/in/tym-l-963833174/"><img class="socialIcon" src="../img/linkedin.png" alt="LinkedIn"/></a>';
+          echo'<a class="navbar-brand" href="https://github.com/TymLen"><img class="socialIcon" src="../img/GitHub.png" alt="gitHub"/></a>';
           echo'</form>';
         echo'</div>';
       echo'</nav>';

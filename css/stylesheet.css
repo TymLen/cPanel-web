@@ -8,8 +8,7 @@ body {
 	padding: 0;
 	min-height: 100%;
 	background-color: #202020;
-	background-image: url('../img/blueback.png');
-	background-size: cover;
+	background-image: url('../img/background.png');
 }
 .navbar{
 	background-color: #363636;
@@ -34,8 +33,11 @@ article {
 	margin-right: 5%;
 	padding: 76px 0px;
 	overflow: hidden;
+	border-radius:10px;
+	box-shadow: 0 15px 30px rgba(0,0,0,.5);
 }
 .article-font{
+	margin-top: 2%;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -379,3 +381,10 @@ iframe{
 	display: none;
 	text-align: center;
   }  
+  .card{
+	  box-shadow: 0 15px 30px rgba(0,0,0,.2);
+  }
+  th{
+	  background-color:#72449e;
+	  color: white;
+  }

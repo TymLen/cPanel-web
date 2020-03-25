@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if($result->num_rows > 0){
 	echo '<p class="tableText">Formal Education</p>';
 	echo '<table class="table table-bordered table-striped">';
-	echo '<tr class="table-primary">';
+	echo '<tr>';
 		echo '<th>Name</th>';
 		echo '<th>School</th>';
 		echo '<th>Date</th>';
@@ -40,7 +40,7 @@ if($result->num_rows > 0){
 	echo '<p class="tableText">Online Courses/Accreditations</p>';
 	echo '<table class="table table-bordered table-striped">';
 	echo' <caption><h5>Click name to see certificate</h5></caption>';
-	echo '<tr class="table-primary">';
+	echo '<tr>';
 		echo '<th>Name</th>';
 		echo '<th>School</th>';
 		echo '<th>Date</th>';

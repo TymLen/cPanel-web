@@ -17,7 +17,8 @@ function getLatestProjects(){
 		while($row = $result->fetch_assoc()){  
 			echo '<div class="col-md-4">';
 			echo '<div class="card border-secondary mb-3" style="max-width: 18rem;">';
-			echo '<img class="img-thumbnail" src= "../img/icons/'.$row["picture"].'.png"></img>';
+			echo '<a href="../html/protemplate.php?projectid='.$row["proid"].';">';
+			echo '<img class="img-thumbnail" src= "../img/icons/'.$row["picture"].'.png"/>';
 			echo '<div class="card-body">';
 			if($row["longdisc"] === NULL){
 				$disc = $row["info"];
@@ -34,16 +35,12 @@ function getLatestProjects(){
 			}
 			echo '<p class="card-text"><small class="text-muted">'.$date.'</small></p>';
 			echo '</div>';
-			echo '<div class="btn-group">';
-			echo '<button class="btn btn-sm btn-outline-secondary" onclick=window.location.href="../html/protemplate.php?projectid='.$row["proid"].';">View</button>';
 			echo '</div>';
 			echo '</div>';
-			echo '</div>';
+			echo '</a>';
 			echo '</div>';
 			echo '</div>';
 			}	
-			echo '</div>';
-			echo '</div>';
 	}
 	mysqli_close($conn); 
 }
